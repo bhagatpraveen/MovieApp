@@ -64,6 +64,7 @@ let movieList = [
               
                 var items = JSON.parse(localStorage.getItem('movies'));
                 let parentContainer = document.getElementsByClassName('list-movies')[0];
+                let panel = document.getElementsByClassName('panel')[0];
                 items.sort(sortByName('name'));
                 for(var i = 0; i < items.length; i++) {
                     var poster = document.createElement("IMG");
