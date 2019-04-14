@@ -1,0 +1,1 @@
+clone the repo and directly run the index.html file t0 see the app.

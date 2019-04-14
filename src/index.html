@@ -1,0 +1,61 @@
+<html>
+    <head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script type="text/javascript" src="index.js"></script>
+        <title>Welcome to Praveen Movie Library</title>
+ 
+    </head>
+ 
+    <body>
+   
+        <div id="container">
+            <div class="logo-img">
+                <img class="logo" src=" logo.png"/>
+            </div>
+            <hr>
+            <div class="content-box">
+                <div class="button">
+                    <button class="btn" name="my-movie-library" onclick="reloadPage()">My Movie Library</button> 
+                    <button id="myBtn" class="btn" name="add-search" onclick="openModal()">Add New movie</button> 
+                    <button class="btn" name="my-movie-library" onclick="deleteMovie()">Delete Movie
+                    </button> 
+                </div>
+                <div class="serach-box">
+                    <input  placeholder="search your movie" type="text" id="title" onkeypress ="getMovieInfo()" />
+                </div>
+                <div class="search-result">
+                    <div class="cards">
+                        <img class="poster-img" id="poster">
+                        <p class="movie-year" id="movieYear"></p> 
+                        <p class="movie-title" id="movieTitle"></p>
+                    </div>
+                </div>
+
+                <div class="list-movies">
+                 
+                      
+                  
+                </div>
+
+                <div id="myModal" class="modal">
+
+                  <!-- Add movie Modal content -->
+                  <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                        <form name="submitmovie" onsubmit="addMov()">
+                           <label>Enter Movie Name</label>
+                            <input type="text" name="movie-name" id="mnane" placeholder="enter movie name" >
+                            <lable>Year</lable>
+                            <input type ="number" name="movie-year" id="myear" placeholder="movie-year">
+                             <lable>Poster Url</lable>
+                            <input type ="url" name="movie-poster" id="mposter" placeholder="movie-poster-url">
+                            <button class="addMovie" name="addMovie" type = "submit">Submit</button>
+                        </form>
+                   
+                  </div>
+
+                </div>
+            </div>                  
+        </div> 
+    </body>
+</html>
